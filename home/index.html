@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/phd.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="教授博导&#x2F;硕导">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Complex Network">
+<meta property="og:url" content="http://example.com/home/index.html">
+<meta property="og:site_name" content="Complex Network">
+<meta property="og:description" content="教授博导&#x2F;硕导">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="王冰">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/home/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Complex Network</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    
+      <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Complex Network</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-个人首页">
+
+    <a href="/%E4%B8%AA%E4%BA%BA%E9%A6%96%E9%A1%B5/" rel="section"><i class="fas fa-user fa-fw"></i>个人首页</a>
+
+  </li>
+        <li class="menu-item menu-item-团队近况">
+
+    <a href="/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/" rel="section"><i class="far fa-comments fa-fw"></i>团队近况</a>
+
+  </li>
+        <li class="menu-item menu-item-科研成果">
+
+    <a href="/%E7%A7%91%E7%A0%94%E6%88%90%E6%9E%9C/" rel="section"><i class="fas fa-flask fa-fw"></i>科研成果</a>
+
+  </li>
+        <li class="menu-item menu-item-团队成员">
+
+    <a href="/%E5%9B%A2%E9%98%9F%E6%88%90%E5%91%98/" rel="section"><i class="fas fa-users fa-fw"></i>团队成员</a>
+
+  </li>
+        <li class="menu-item menu-item-教学工作">
+
+    <a href="/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" rel="section"><i class="fas fa-school fa-fw"></i>教学工作</a>
+
+  </li>
+        <li class="menu-item menu-item-联系方式">
+
+    <a href="/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/" rel="section"><i class="fas fa-map-marked fa-fw"></i>联系方式</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/index.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/index.html" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-06 13:50:21" itemprop="dateCreated datePublished" datetime="2021-12-06T13:50:21+08:00">2021-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-27 20:56:18" itemprop="dateModified" datetime="2021-12-27T20:56:18+08:00">2021-12-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、个人简介"><a href="#一、个人简介" class="headerlink" title="一、个人简介"></a>一、个人简介</h3><p><font size="3" face="微软雅黑">王冰，女，上海大学计算机工程与科学学院，教授。上海市东方学者入选者 （2017），日本学术振兴学会（JSPS）外国人特别研究员入选者（2009）。主要研究领域为复杂网络，数据分析与建模等与复杂性科学相关的研究，研究兴趣包括网络分析与建模、网络传播等。2006年毕业于大连理工大学应用数学系运筹学与控制论专业获博士学位。2006-2015先后在韩国成均馆大学、日本东京大学从事科研工作。2015年进入上海大学计算机学院工作。作为主力骨干参与日本科学技术振兴机构（JST）FIRST（合原最先端数理建模项目，2011-2014），ERATO（合原复杂数理建模项目,2007-2009），主持和参与多项国家自然基金。共发表国际学术论文50余篇。申请专利15项，授权3项，软件著作6项。现为中国工业与应用数学学会会员，中国工业与应用数学学会复杂网络与复杂系统专业委员会委员，中国仿真学会人工社会专业委员会委员（2020.11-2025.11），上海市计算机学会会员；“Special Section on The Second Step of the FIRST（NOLTA）”(2018)客座副编委；“Special Section of Nonlinear Theory and Its Applications (NOLTA)”(2014) 客座副编委；《Clinical Research in infectious Disease》编委委员；《Austin Journal of Infectious Diseases》编委委员。</font></p>
+<hr>
+<h3 id="二、英文简介"><a href="#二、英文简介" class="headerlink" title="二、英文简介"></a>二、英文简介</h3><p><font size="3" face="Times New Roma">Bing Wang received the PH.D. degree in operational research and cybernetics from Dalian University of Technology, Dalian, China, in 2006. After getting her PH.D. degree, she visited the University of Tokyo. She is currently a Professor with School of Computer Engineering and Science, Shanghai University, Shanghai, China. She has coauthored more than 30 international journal papers. Her present research interests include network modeling, network propagation.</font></p>
+<hr>
+<h3 id="三、教育经历"><a href="#三、教育经历" class="headerlink" title="三、教育经历"></a>三、教育经历</h3><p><font size="3" face="微软雅黑">2001/09～2006/07 大连理工大学应用数学系 运筹学与控制论专业 博士学位</font></p>
+<hr>
+<h3 id="四、工作经历"><a href="#四、工作经历" class="headerlink" title="四、工作经历"></a>四、工作经历</h3><p><font size="3" face="微软雅黑">2017/08～至今  上海大学计算机工程与科学学院，教授<br>2015/04～2017/08 上海大学计算机工程与科学学院，副教授<br>2007/09～2015/04 日本东京大学生产技术研究所 研究员<br>2006/09～2007/08 韩国成均馆大学 物理系 博士后</font></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:46:50" itemprop="dateCreated datePublished" datetime="2021-12-05T16:46:50+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-07 10:47:36" itemprop="dateModified" datetime="2021-12-07T10:47:36+08:00">2021-12-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、联系方式"><a href="#一、联系方式" class="headerlink" title="一、联系方式"></a>一、联系方式</h3><p><font size="3" face="微软雅黑">1.邮箱：<a href="mailto:&#x62;&#x69;&#110;&#103;&#x62;&#105;&#103;&#x6e;&#119;&#x61;&#x6e;&#x67;&#64;&#115;&#104;&#117;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;">&#x62;&#x69;&#110;&#103;&#x62;&#105;&#103;&#x6e;&#119;&#x61;&#x6e;&#x67;&#64;&#115;&#104;&#117;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;</a><br>2.通讯地址：上海市宝山区上大路99号 上海大学计算机学院200444</font></p>
+<hr>
+<h3 id="二、地址地图"><a href="#二、地址地图" class="headerlink" title="二、地址地图"></a>二、地址地图</h3><p><font size="3" face="微软雅黑">中国上海市宝山区南陈路333号，上海大学计算机工程与科学学院1027</font></p>
+<p><img src="/images/map.png"></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:46:33" itemprop="dateCreated datePublished" datetime="2021-12-05T16:46:33+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-07 13:29:38" itemprop="dateModified" datetime="2021-12-07T13:29:38+08:00">2021-12-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、教学工作"><a href="#一、教学工作" class="headerlink" title="一、教学工作"></a>一、教学工作</h3><p><img src="/images/teaching.png"></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E4%B8%AA%E4%BA%BA%E9%A6%96%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E4%B8%AA%E4%BA%BA%E9%A6%96%E9%A1%B5/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:46:33" itemprop="dateCreated datePublished" datetime="2021-12-05T16:46:33+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-11 14:18:22" itemprop="dateModified" datetime="2022-06-11T14:18:22+08:00">2022-06-11</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、个人简介"><a href="#一、个人简介" class="headerlink" title="一、个人简介"></a>一、个人简介</h3><p><font size="3" face="微软雅黑">王冰，女，上海大学计算机工程与科学学院，教授。上海市东方学者入选者 （2017），日本学术振兴学会（JSPS）外国人特别研究员入选者（2009）。主要研究领域为复杂网络，数据分析与建模等与复杂性科学相关的研究，研究兴趣包括网络分析与建模、网络传播等。2006年毕业于大连理工大学应用数学系运筹学与控制论专业获博士学位。2006-2015先后在韩国成均馆大学、日本东京大学从事科研工作。2015年进入上海大学计算机学院工作。作为主力骨干参与日本科学技术振兴机构（JST）FIRST（合原最先端数理建模项目，2011-2014），ERATO（合原复杂数理建模项目,2007-2009），主持和参与多项国家自然基金。共发表国际学术论文50余篇。申请专利15项，授权3项，软件著作6项。现为中国工业与应用数学学会会员，中国工业与应用数学学会复杂网络与复杂系统专业委员会委员，中国仿真学会人工社会专业委员会委员（2020.11-2025.11），上海市计算机学会会员；“Special Section on The Second Step of the FIRST（NOLTA）”(2018)客座副编委；“Special Section of Nonlinear Theory and Its Applications (NOLTA)”(2014) 客座副编委；《Clinical Research in infectious Disease》编委委员；《Austin Journal of Infectious Diseases》编委委员。</font></p>
+<hr>
+<h3 id="二、英文简介"><a href="#二、英文简介" class="headerlink" title="二、英文简介"></a>二、英文简介</h3><p><font size="3" face="Times New Roma">Bing Wang received the PH.D. degree in operational research and cybernetics from Dalian University of Technology, Dalian, China, in 2006. After getting her PH.D. degree, she visited the University of Tokyo. She is currently a Professor with School of Computer Engineering and Science, Shanghai University, Shanghai, China. She has coauthored more than 30 international journal papers. Her present research interests include network modeling, network propagation.</font></p>
+<hr>
+<h3 id="三、教育经历"><a href="#三、教育经历" class="headerlink" title="三、教育经历"></a>三、教育经历</h3><p><font size="3" face="微软雅黑">2001/09～2006/07 大连理工大学应用数学系 运筹学与控制论专业 博士学位</font></p>
+<hr>
+<h3 id="四、工作经历"><a href="#四、工作经历" class="headerlink" title="四、工作经历"></a>四、工作经历</h3><p><font size="3" face="微软雅黑">2017/08～至今  上海大学计算机工程与科学学院，教授<br>2015/04～2017/08 上海大学计算机工程与科学学院，副教授<br>2007/09～2015/04 日本东京大学生产技术研究所 研究员<br>2006/09～2007/08 韩国成均馆大学 物理系 博士后<br></font></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E5%9B%A2%E9%98%9F%E6%88%90%E5%91%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E5%9B%A2%E9%98%9F%E6%88%90%E5%91%98/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:46:21" itemprop="dateCreated datePublished" datetime="2021-12-05T16:46:21+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-11 14:21:46" itemprop="dateModified" datetime="2022-06-11T14:21:46+08:00">2022-06-11</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、在读博士生"><a href="#一、在读博士生" class="headerlink" title="一、在读博士生"></a>一、在读博士生</h3><table>
+    <tr>
+        <td style="width:50%"><center><img src="/images/zhangkebo.jpg" height="300px"></center>博士：PhD2019<br>姓名：张克波<br>研究方向：复杂网络上的流行病传播</td>
+        <td style="width:50%"><center><img src="/images/hongxiao.jpg" height="300px"></center>博士：PhD2020<br>姓名：洪潇<br>研究方向：复杂网络上的流行病传播</td>
+    </tr>
+</table>
+
+<hr>
+<h3 id="二、在读硕士生"><a href="#二、在读硕士生" class="headerlink" title="二、在读硕士生"></a>二、在读硕士生</h3><table>
+    <tr>
+        <td style="width:50%"><center><img src="/images/dingxu.jpg" height="300px"></center>硕士：MS2019<br>姓名：丁旭<br>研究方向：复杂网络与观点动力学</td>
+        <td style="width:50%"><center><img src="/images/xiezeyang.jpg" height="300px"></center>硕士：MS2019<br>姓名：解泽洋<br>研究方向：时序网络下流行病传播</td>
+    </tr>
+    <tr>
+        <td style="width:50%"><center><img src="/images/yanglizhen.jpg" height="300px"></center>硕士：MS2019<br>姓名：杨立珍<br>研究方向：多种群网络上的流行病传播 </td>
+        <td style="width:50%"><center><img src="/images/wangxiya.jpg" height="300px"></center>硕士：MS2020<br>姓名：王西雅<br>研究方向：机器学习与传播动力学</td>
+    </tr>
+    <tr>
+        <td style="width:50%"><center><img src="/images/wulili.jpg" height="300px"></center>硕士：MS2020<br>姓名：吴莉莉<br>研究方向：传染病的建模与防治 </td>
+        <td style="width:50%"><center><img src="/images/zhangxiaorang.jpg" height="300px"></center>硕士：MS2021<br>姓名：张晓冉<br>研究方向：网络科学与机器学习</td>
+    </tr>
+    <tr>
+        <td style="width:50%"><center><img src="/images/maojunkai.jpg" height="300px"></center>硕士：MS2021<br>姓名：毛军凯<br>研究方向：网络科学与机器学习 </td>
+    </tr>
+</table>
+
+<hr>
+<h3 id="三、毕业硕士生"><a href="#三、毕业硕士生" class="headerlink" title="三、毕业硕士生"></a>三、毕业硕士生</h3><p><font size="3" face="微软雅黑">MS2016：杨梅<br>MS2017：何向阳<br>MS2018：孙志雯 曾红娟 苟敏</font></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E7%A7%91%E7%A0%94%E6%88%90%E6%9E%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E7%A7%91%E7%A0%94%E6%88%90%E6%9E%9C/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:46:09" itemprop="dateCreated datePublished" datetime="2021-12-05T16:46:09+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-01 21:06:59" itemprop="dateModified" datetime="2022-01-01T21:06:59+08:00">2022-01-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、科研项目"><a href="#一、科研项目" class="headerlink" title="一、科研项目"></a>一、科研项目</h3><p><font size="3" face="微软雅黑">1.上海东方学者特聘教授（2017），2018.01-2020.12，主持。<br>2.国家自然科学基金青年基金项目，“面向流行病空间传播的个体行为反应扩散模型研究”，2017.01-2019.12，No.61603237，主持。<br>3.科技部国家重点研发计划（国际科技创新合作专项）“社交网络群体行为的动态推演及预控研究”，2019.01-2021.12，参加。<br>4.上海市浦江人才项目， “基于形状空间理论和复杂网络理论的纳米材料图像处理方法的研究”，2017.06-2019.05, 参加。<br>5.大数据驱动的管理与决策研究重大研究计划重点支持项目，“消费行业大数据驱动的融合微观-中观-宏观多层行为与目标的可预见全景式管理决策分析模型和方法”，2018.01-2021.12，参加。<br>6.日本学术振兴学会（JSPS）外国人特别研究员项目，“复杂网络的社区结构检测算法及传染病的传播与控制研究”，2009.11-2011.12，主持。</font></p>
+<hr>
+<h3 id="二、学术交流"><a href="#二、学术交流" class="headerlink" title="二、学术交流"></a>二、学术交流</h3><p><font size="3" face="微软雅黑">1.2021.11.23 王冰老师受苏州大学邀请做学术报告，题目：面向COVID-19流行病传播的干预策略影响分析的数学模型研究——从群体到个体。<br>2.2019.9.28-29 王冰老师受邀在中日联合论坛做报告（Joint workshop with Tohoku University, Frontiers in Mathematical Science Research Workshop）题目：Applications of network approaches to epidemic modelling，40min，上海，邀请报告。<br>3.2019.8.23-24，《第四届全国大数据与社会计算学术会议》(BDSC,2019)，计算机学院承办<br>4.2018.12 王冰老师受邀担任“2018年甜橙金融杯大数据建模大赛”总决赛评委。<br>5.2018.8.26-31 访问日本东京大学 Gouhei Tanaka教授。<br>6.2021.11.29 邀请华东师范大学唐明教授做学术报告，题目：有限医疗资源下评估和降低COVID-19疫情的死亡人数<br>7.2020.11 邀请大连民族大学许小可教授做学术报告，题目: 新冠肺炎城市疫情爆发的多影响因素分析：从交通流量到网络科学。<br>8.2020.11 邀请苏州大学马欢飞教授做学术报告，题目：因果分析中的时滞和网络结构。<br>9.2018.6 邀请复旦大学章忠志教授做学术报告，题目：基于电阻网络的节点与边的中心性。<br>10.2018.5 邀请上海财经大学刘建国教授做学术报告，题目：复杂社会系统的若干管理与决策问题研究。</font></p>
+<hr>
+<h3 id="三、学术兼职"><a href="#三、学术兼职" class="headerlink" title="三、学术兼职"></a>三、学术兼职</h3><p><font size="3" face="微软雅黑">中国工业与应用数学学会复杂网络与复杂系统专业委员会委员；中国工业与应用数学学会会员；中国仿真学会人工社会专业委员会委员（2020.11-2025.11），上海市计算机学会会员;《Special Section on The Second Step of the FIRST》（NOLTA，2018）客座副编委；《Special Section of Nonlinear Theory and Its Applications》 (NOLTA，2014)客座副编委，担任多个学术杂志审稿人，包括《Scientific Reports》、《IEEE Access》、《Information Science》、《Physica A》、《Plos One》、《Journal of Physics: Complexity》、《Annuals of Mathematics and Physics》, 《Mathematical Biosciences and Engineering》,《Physical Biology》《复杂系统与复杂性科学》、《物理学报》等。</font></p>
+<hr>
+<h3 id="四、大学生创新创业训练项目"><a href="#四、大学生创新创业训练项目" class="headerlink" title="四、大学生创新创业训练项目"></a>四、大学生创新创业训练项目</h3><p><font size="3" face="微软雅黑">1.李嘉琪,“VR场景下的表情识别”,国家级项目（202010280026）,2020。<br>2.何济原,“用于3D打印机的三维重建技术的研究”,市级项目（S201910280052）,2019。 <br>3.欧阳皓寰,“基于脑波检测的三维手功能评价系统”,校级,2018。   <br>4.徐扬杨,“复杂环境中人脸识别系统的开发”,国家级项目,2017。<br>5.徐世兴,“血管介入治疗机器人中的血管三维重建的研究”,市级,2017。</font></p>
+<hr>
+<h3 id="五、专利发明"><a href="#五、专利发明" class="headerlink" title="五、专利发明"></a>五、专利发明</h3><p><font size="3" face="微软雅黑">1.发明名称：动态多源信息和行为响应作用下的信息—流行病协同演化分析方法，申请号或专利号：202111303266.X。<br>2.发明名称：一种基于二分图流行病传播干预方法，申请号或专利号：202110827481.3。<br>3.发明名称：时序网络上基于检测和接触追踪的流行病干预策略，申请号或专利号：202110532703.9。<br>4.发明名称： 基于个体感染状态和个体属性实施干预的流行病控制方法，申请号或专利号：202011558900.X。<br>5.发明名称：基于节点信息路径分布的多层网络规约化方法，申请号或专利号：202010765107.0。<br>6.发明名称：一种基于随机游走的时许网络免疫方法，申请号或专利号：202010861973.X。<br>7.发明名称：不可复制防伪标签的薄膜图案数据库建立及分类识别方法，申请号或专利号：202011559042.0。<br>8.发明名称：基于机器学习的交互式图像分割方法，申请号或专利号：202110186749.X。<br>9.发明名称：基于双路注意力编解码网络的三维图像分割方法，申请号或专利号：202110863600.0。<br>10.发明名称：基于检测直线和线段的菊池花样几何信息提取方法，申请号或专利号：202010297634.3+。<br>11.发明名称：基于复杂网络理论的图像分割方法，申请号或专利号：202010083808.6。<br>12.发明名称：用于机器学习和深度学习训练用的物体多角度图像采集装置，专利号： ZL201810104230.0 授权日期：2020.06.22。<br>13.发明名称：基于手势控制非触摸屏的人机交互系统及方法，专利号： ZL201710414437.3 授权日：2020.06.10。<br>14.发明名称：提高原子力显微镜图像质量的方法，专利号：ZL201610093121.4，授权日：2019.06.04。<br>15.发明名称：监视系统中自动记录动态物体的方法,申请号或专利号： 201610093110.6。</font></p>
+<hr>
+<h3 id="六、软件著作"><a href="#六、软件著作" class="headerlink" title="六、软件著作"></a>六、软件著作</h3><p><font size="3" face="微软雅黑">1.基于路径分布的网络自动化比较分析软件V1.0（登记号：2021SR0087832）<br>2.基于随机游走的时序网络免疫分析软件 （登记号：2021SR0221874）<br>3.基于居住地、公共场所的流行病传播干预分析软件（登记号：2021R11S0787615）<br>4.时序网络上个体行为分析软件；（登记号：2021R11L1677210）<br>5.时序网络上基于检测和接触追踪的流行病干预分析（登记号：2021R11L2288991）<br>6.时序网络上多数规则观点传播分析软件；（登记号:2021SR1773947</font></p>
+<hr>
+<h3 id="七、发表论文"><a href="#七、发表论文" class="headerlink" title="七、发表论文"></a>七、发表论文</h3><p><font size="3" face="微软雅黑">1.X. Hong, Y.X. Han, G. Tananka, <strong>B. Wang</strong>. Co-evolution dynamics of epidemic and information under dynamical multi-source information and behavioral responses, Information Fusion, submitted.<br>2.K.B. Zhang, Y.X. Han, <strong>B. Wang</strong>. Intervention of resource allocation strategies on spatial spread of epidmeic, Phys. Rev. E, submitted.<br>3.<strong>B. Wang</strong>, X. Ding, Y.X. Han*. Phase transition in the majority-vote model on time-varying networks, Phys. Rev. E，submitted<br>4.X. Hong, Y.X.Han, <strong>B. Wang</strong><em>. Intervention strategy based on detection and contact tracing in time-varying networks. IEEE transactions on Cybernetics, submitted<br>5.<strong>B. Wang</strong>, L.Z. Yang, Y.X. Han</em>. Intervention strategies for epidemic spread in bi-partite metapopulation networks, Phys. Rev. E, submitted<br>6.<strong>B. Wang</strong><em>, H.J. Zeng, and Y.X. Han</em>. Dynamical immunization based on random-walk in time-varying networks. Chaos, Solitions &amp;Fractals, 155，111755，2022.<br>7.<strong>B. Wang</strong>, Z.Y. Xie, Y.X. Han*. Impacts of individual behavior changes on epidemic in time-varying networks. Phys. Rev. E，104，044307，2021.<br>8.Yuexing Han*, <strong>B Wang</strong>, Jie Luo, Long Li, Xiaolong Li. A Classification Method for EEG Motor Imagery Signals based on Parallel Convolutional Neural Network. Biomedical Signal Processing and Control 71 ,103190, 2022.<br>9.<strong>B. Wang</strong><em>, M. Gou, Y.X. Han</em>. Impacts of information propagation on epidemic spread over different migration routes. Nonlinear Dynamics, 105(4), 3835-3847, 2021.<br>10.Y.X. Han, ZY. Xie, Y.K. Guo, <strong>B. Wang</strong><em>. Modeling of suppression and mitigation interventions in the COVID-19 epidemics, BMC Public health. 21，723，2021.<br>11.Y.X. Han, X.l. Li, <strong>B. Wang</strong>, L. Wang</em>. Boundary Loss-Based 2.5D Fully Convolutional Neural Networks Approach for Segmentation: A Case Study of the Liver and Tumor on Computed Tomography. Algorithm, 14, 144, 2021.<br>12.<strong>B. Wang</strong><em>, Z.W. Sun, and Y.X. Han</em>. A path-based distribution measure for network comparison, Entropy, 22, 1287, 2020.<br>13.<strong>B. Wang</strong>, H.J. Zeng, and Y.X. Han*. Random walks in time-varying networks with memory. Phys. Rev. E, 102，062309，2020.<br>14.<strong>B. Wang</strong><em>, M. Gou, Y.K. Guo, G.H. Tanaka, Y.X. Han. Network structure-based interventions on spatial spread of epidemics in metapopulation networks, Phys. Rev. E, 102, 062306, 2020.<br>15.N.N. Dong, Y.X. Han, Q. Li, <strong>B. Wang</strong></em>. Impact of multitype interaction on epidemic spreading in temporal networks. International Journal of Modern Physics C, 31(01), 1-13,2020.<br>16.Y.X. Han, L.L. Song, <strong>B. Wang</strong><em>, S. Sun, Q. Wang. AtomicNet:A novel approach to identify the crystal structure of each simulated atom, Modelling and Simulation in Materials Science and Engineering, 28, 035005, 2020.<br>17.X.H. Pan, G.Q. Xu</em>, <strong>B. Wang</strong><em>,T. Zhang. A novel community detection algorithm based on local similarity of clustering coefficient in social networks, IEEE Access, 7(1),121586-121598, 2019.<br>18.M. Yang, <strong>B. Wang</strong></em>, Y.X. Han. Joint effect of individual’s memory and attractiveness in temporal networks on spreading dynamics, International Journal of Modern Physics C, 30(01), 1950011, 2019.<br>19.Y.X. Han, C.B. Lai, <strong>B. Wang</strong><em>, T. Hu, D.L. Hu, and H. Gu. Segmentation and Analysis Method for Two-Phase Ceramic (HfB2-B4C) Based on the Detection of Virtual Boundaries. Image Analysis &amp; Stereology, 38(1), 95-105, 2019 .<br>20.Y.X. Han</em>, C.B. Lai, <strong>B. Wang</strong>, Hui Gu. Segmenting images with complex textures by using hybrid algorithm. Journal of Electronic Imaging, 28(1):13-30, 2019.<br>21.C.B. Lai, L.L. Song, Y.X. Han*, Q. Li, H. Gu, <strong>B.Wang</strong>, Q. Qian and W. Chen. Material image segmentation with the machine learning method and complex network method. MRS Advances, 1-6, 2019.<br>22.M. Yang, <strong>B. Wang</strong><em>, Y.X. Han. Random walk on the activity-driven model with mutual selection. Europhys. Lett., 124, 48004, 2018.<br>23.Q. Wang, Y.X. Han</em>, Q. Li, <strong>B. Wang</strong>, Akihiko Konagaya, Segmenting overlapping nanoobjects in atomic force microscopy image, Journal of Nanophotonics. 12(1), 016003, 2018.<br>24.<strong>B. Wang</strong><em>, Y.X. Han, and G. Tanaka. Interplay between epidemic spread and information propagation on metapopulation networks. Journal of Theoretical Biology, 420,18-25, 2017.<br>25.<strong>B. Wang</strong></em>, H. Suzuki, and K. Aihara. Enhancing synchronization stability in a multi-area power grid. Scientific Reports, 6, 26596, 2016.<br>26.<strong>B. Wang</strong><em>, G. Tanaka, H. Suzuki, and K. Aihara. Epidemic spread on interconnected metapopulation networks. Physical Review E, 90, 032806, 2014.<br>27.<strong>B. Wang</strong></em>, H. Suzuki, and K. Aihara. Evaluating roles of nodes in optimal allocation of vaccines with economic considerations, PLoS, One, 8, e70793, 2013.<br>28.<strong>B. Wang</strong><em>, L. Cao, H. Suzuki, and K. Aihara. Safety-information-driven human mobility patterns with metapopulation epidemic dynamics, Scientific Reports, 2, 887, 1-8, 2012.<br>29.<strong>B. Wang</strong></em>, L. Cao, H. Suzuki, and K. Aihara. Impacts of clustering on interacting epidemics, Journal of Theoretical Biology, 340, 121-130, 2012.<br>30.L. Cao*, X. Li, <strong>B. Wang</strong>, and K. Aihara. Rendezvous effects in the diffusion process on bipartite metapopulation networks, Physical Review E, 84, 041936, 2011.<br>31.Y.X. Han*, <strong>B. Wang</strong>, M. Idesawa, and H. Shimai. Recognition of multiple configurations of objects with limited data, Pattern Recognition, 43, 4, 1467-1475, 2010.<br>32.<strong>B. Wang</strong><em>, L. Cao, H. Suzuki, and K. Aihara. Epidemic spread in adaptive networks with multitype agents, Journal of Physics A: Mathematical and Theoretical, 44, 035101, 2011.<br>33.L. Cao</em>, H. Ohtsuki, <strong>B. Wang</strong>, K. Aihara. Evolution of cooperation on adaptively weighted networks, Journal of Theoretical Biology, 272, 8-15, 2011.<br>34.<strong>B. Wang</strong><em>, K. Aihara, and B.J. Kim. Comparison of immunization strategies in geographical networks, Physics Letter A, 373, 42, 3877-3882, 2009.<br>35.<strong>B. Wang</strong></em>, Y. Han, L. Chen, and K. Aihara. Limited ability driven phase transitions in the coevolution process in Axelrod’s model, Physics Letter A, 373,17, 1519-1523, 2009.<br>36.<strong>B. Wang</strong><em>, K. Aihara, and L. Chen. Jamming in weighted scale-free gradient networks, Europhysics Letter, 83, 2, 28006, 2008.<br>37.<strong>B. Wang</strong> and B. J. Kim</em>. A high robustness and low cost model for cascading failures, Europhysics Letter, 78, 48001, 2007.<br>38.<strong>B. Wang</strong><em>, T. Zhou, Z. L Xiu and B.J. Kim. Optimal synchronizability of networks, European Physics Journal B, 60, 1, 89-95, 2007.<br>39.Z.Z. Zhang</em>, L.L. Rong, <strong>B. Wang</strong>, Shuigeng Zhou, and Jihong Guan. Local-world evolving networks with tunable clustering, Physica A：Statistical Mechanics and its Applications, 380, 1, 639-650, 2007.<br>40.<strong>B. Wang</strong><em>, H.W. Tang, C.H. Guo, and Z.L. Xiu. Entropy optimization of scale-free networks robustness to random failures, Physica A：Statistical Mechanics and its Applications, 363, 2, 591-596, 2006.<br>41.<strong>B. Wang</strong></em>, H.W. Tang, C.H. Guo, Z.L. Xiu, and T. Zhou. Optimization of network structure to random failures, Physica A：Statistical Mechanics and its Applications, 368(2), 607-614, 2006.<br>42.<strong>B. Wang</strong><em>, H.W. Tang, Z.L. Xiu, and C.H. Guo. Optimizing synchronizability of scale-free networks in geographical space, Chinese Physics Letter, 23, 11, 3123-3126, 2006.<br>43.<strong>B. Wang</strong></em>, H.W. Tang, Z.Z. Zhang, and Z.L. Xiu. Evolving scale-free network model with tunable clustering, International Journal of Modern Physics B, 19, 26, 3951-3959, 2006.<br>44.Y.X. Han, <strong>B. Wang</strong>, H. Koike and M. Idesawa. Object Recognition with a Limited Database by Using Shape Space Theory. A chapter of the book: Image Processing: Concepts, Methodologies, Tools, and Applications (3 Volumes). Information Resources Management Association (IRMA, USA), Release Date: May, 2013. Copyright © 2013. 1276 pages, Chapter 11, pp. 181-200, 2013.ISBN13: 9781466639942, ISBN10: 1466639946, EISBN13: 9781466639959<br>45.Y.X. Han, <strong>B. Wang</strong>, H. Koike and M. Idesawa. Object Recognition with a Limited Database by Using the Shape Space Theory.A chapter of the book: Cross-Disciplinary Applications of Artificial Intelligence and Pattern Recognition: Advancing Technologies. IGI Global, Chapter 8, pp. 128-147, 2011.<br>46.<strong>B. Wang</strong><em>, H. Suzuki, and K. Aihara. Economic consideration of optimal vaccination distribution for epidemic spreads in complex networks, Journal of Physics: Conference Series, Vol. 410, No.1, 012095, 2013. IC-MSQUARE 2012: INTERNATIONAL CONFERENCE ON MATHEMATICAL MODELLING IN PHYSICAL SCIENCES. 2013. 410:012095. ISTP收录号: 000315409700095.<br>47.Y. X. Han</em>, H. Koike, <strong>B. Wang</strong>, and M. Idesawa. Recognition of objects in various situations from two dimensional images, The 2nd International Conference on Image Processing Theory Tools and Applications (IPTA), pp. 405-410, 2010.  EI收录号: 20104513366410<br>48.<strong>B. Wang</strong><em>, Y. Han, L. Chen, and K. Aihara. Multiple phase transitions in the culture dissemination, Complex Sciences, Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering (LNICST), Vol. 4, pp. 286-290, 2009. COMPLEX SCIENCES, PT 1. 2009. 4:286.<br>49.<strong>B. Wang</strong></em>, K. Aihara, and B. J. Kim. Immunization of geographical networks, Complex Sciences, Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering (LNICST), Vol. 5, pp. 2388-2395, 2009.  COMPLEX SCIENCES, PT 2. 2009. 5:2388-2395.<br>50.<strong>B. Wang</strong>*, K. Aihara, and L. Chen. Traffic jamming in disordered flow distribution networks, Lecture Notes in Operations Research 8, The Seventh International Symposium on Operations Research and its Applications (ISORA2008), Lijiang, Yunnan, China, Oct. 31-Nov. 2, 2008. OPERATIONS RESEARCH AND ITS APPLICATIONS, PROCEEDINGS. 2008. 8:465.</font></p>
+<hr>
+<h3 id="八、国际国内会议发表"><a href="#八、国际国内会议发表" class="headerlink" title="八、国际国内会议发表"></a>八、国际国内会议发表</h3><p><font size="3" face="微软雅黑">1.X. Hong，Y. Han, <strong>B. Wang</strong><em>. Impacts of detection and contact tracing on the epidemic spread in time-varying networks. 10th International Conference on complex networks and their applications, Nov. 30-Dec. 2, 2021, Madrid, Spain. (Poster)<br>2.孙志雯，王健嘉</em>，<strong>王冰</strong>. Thermodynamic description of complex networks with Boltzmann statistics，第十五届全国复杂网络会议，2019.10.13-15，镇江，2019。<br>3.<strong>王冰</strong>. “Applications of network approaches to epidemic modelling”，Joint workshop with Tohoku University, Frontiers in Mathematical Science Research Worksho-Joint workshop with Tohoku University, Japan，2019.9.28-29,40min, 特邀报告.<br>4.<strong>王冰</strong>. “个体行为作用下的时序网络的传播研究”，第三届系统科学大会，长沙，2019.5.17-18，口头报告。<br>5.C.B. Lai, L.L. Song, Y.X. Han* , Q. Li, H. Gu, <strong>B. Wang</strong>, Q. Qian and W. Chen. Material Image Segmentation with the Machine Learning Method and Complex Network Method. 2018 Materials Research Society (MRS), Nov. 25-30, 2018。<br>6.<strong>B. Wang</strong>. “Impacts of mutual selection in temporal networks on random walk process”, ComplexNetworks2018, 英国，剑桥，2018.12.11-13，poster。<br>7.参加第十四届全国复杂网络学术会议(CCCN2018),重庆,2018.10.12-15。<br>8.<strong>王冰</strong>. ”The interaction of information propagation and epidemic spread based on metapopulation netwoks”第十四届中国网络科学论坛，南京，分组报告,2018.5.4-7；<br>9.赖传滨，韩越兴*，顾辉，<strong>王冰</strong>，Virtual Boundary Net：一种基于深度学习的虚拟边界检测方法，第七届中国数据挖掘大会，济南，2018.8.6-9 ，特邀报告。<br>10.参加Netscix2018会议，杭州，2018.1.5-8。<br>11.<strong>王冰</strong>，杨梅，韩越兴，“Memory effect on epidemic process in activity driven model with attractiveness”“第十三届全国复杂网络会议”，深圳，2017,11.24-27，口头报告。<br>12.董宁宁，<strong>王冰</strong>，李青，韩越兴，”Epidemic spread in temporal networks with multitype agents”“第十三届全国复杂网络会议”，深圳，2017,11.24-27，口头报告。<br>13.<strong>王冰</strong>，“多种群网络上的流行病传播”，第十二届复杂网络会议，太原，2016.10.14-17，口头报告.<br>14.<strong>王冰</strong>，“增强多区域组成的电力网的同步能力”，2016年长三角地区运筹学与控制学术论坛，上海，2016.06.17-19，口头报告.<br>15.<strong>王冰</strong>，“Epidemic spread on interconnected metapopulation networks”, 2016年非线性科学及其应用学生研讨会，武汉，2016.05.28-29，邀请报告。<br>16.<strong>王冰</strong>，“相互作用网络的多种群流行病传播”，生物数学与生物统计小型研讨会，苏州，2016.04.15-17，邀请报告。<br>17.<strong>B. Wang</strong>, G. Tanaka, H. Suzuki and K. Aihara. Epidemic spread in interconnected metapopulation networks. The 3rd International Symposium on Innovative Mathematical Modelling, Tokyo, Japan, 2013.<br>18.<strong>B. Wang</strong>, L. Cao, H. Suzuki, and K. Aihara. Optimal vaccination distributions for epidemic spread in complex networks with economic consideration, International Conference on Towards Mathematical Foundations of Complex Network Theory, Kyoto, Japan, Sep. 14-16, 2012.<br>19.<strong>B. Wang</strong>, H. Suzuki, and K. Aihara. Economic consideration of optimal vaccination distribution for epidemic spreads in complex networks, International Conference on Mathematical Modeling in Physical Sciences, Budapest, Hungary, Sep. 3-7, 2012.<br>20.<strong>B. Wang</strong>, L. Cao, H. Suzuki, and K. Aihara. Bond percolation on clustered networks and their applications to interacting epidemics, The 8th International Conference on Complex Systems, Boston Marriott, Quincy, MA, USA, June 26-July 1, 2011.<br>21.<strong>B. Wang</strong>, L. Cao, H. Suzuki, and K. Aihara. Bond percolation on clustered networks and their applications to interacting epidemics, The 1st International Symposium on Innovative Mathematical Modelling, Tokyo, Japan, Feb. 28-Mar. 2, 2011.<br>22.<strong>B. Wang</strong>, L. Cao, H. Suzuki, and K. Aihara. Epidemic spread in adaptive networks with multitype agents, Dynamics Days Asia Pacific 6, DDAP6, Sydney, Australian, July 12-14, 2010.<br>23.<strong>B. Wang</strong>, Y. -X. Han, L. Chen, and K. Aihara. Multiple phase transitions in the culture dissemination, Complex’2009, The First International Conference on Complex Sciences: Theory and Applications Dissemination, Shanghai, China, Feb. 23-25, 2009.<br>24.<strong>B. Wang</strong>, K. Aihara, and B.J. Kim. Immunization in geographical networks, Complex’2009, The First International Conference on Complex Sciences: Theory and Applications Dissemination, Shanghai, China, Feb.23-25, 2009.<br>25.<strong>B. Wang</strong>, K. Aihara, and L. Chen. Traffic jamming in disordered flow distribution networks, The Seventh International Symposium on Operations Research and its Applications (ISORA2008), Lijiang, Yunnan, China, Oct. 31-Nov. 2, 2008.<br>26.<strong>B. Wang</strong>, K. Aihara, and L. Chen. Jamming in scale-free gradient networks, The 5th International Conferences on Nonlinear Science (DDAP5), Nara, Japan, Sep. 9-12, 2008.<br>27.<strong>B. Wang</strong> and B.J. Kim. Cascading failures in scale-free networks, Spring Meeting of Korean Physics Society, Phoenix Park, Pyungchang, Korea, 2007.<br>28.<strong>B. Wang</strong> and B.J. Kim. A high robustness and low cost model for cascading failures, The 3rd International Workshop on Simulation Physics, Hangzhou, China, Nov.16-18, 2006.</font></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/05/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:45:58" itemprop="dateCreated datePublished" datetime="2021-12-05T16:45:58+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-01 21:06:59" itemprop="dateModified" datetime="2022-01-01T21:06:59+08:00">2022-01-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h3><p><font size="3" face="微软雅黑">1.<strong>B. Wang</strong><em>, H.J. Zeng, and Y.X. Han</em>. Dynamical immunization based on random-walk in time-varying networks. Chaos, Solitions &amp;Fractals，155，111755，2022.<br><strong>中文摘要：</strong>随机游走过程作为简单的扩散过程，能够识别网络中的重要节点，可以应用于免疫策略的制定等问题。考虑到节点间的动态交互行为，网络信息依赖于时间而十分有限，本工作提出一种在时序网络中基于随机游走的动态免疫策略。通过调整时间窗口的大小，节点信息不断累积。与传统的随机免疫相比，免疫效率大幅度提高，与熟识者免疫效果相当。<br><img src="/images/paper1.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">2.Y.X. Han, ZY. Xie, Y.K. Guo, <strong>B. Wang</strong>*. Modeling of suppression and mitigation interventions in the COVID-19 epidemics, BMC Public health，21，723，2021.<br><strong>中文摘要：</strong>非药物干预流行病传播是当前控制新冠疫情的主要有效手段。严格的抑制流行病传播策略如封城等能有效抑制流行病传播，但给正常的社会生活和经济行为带来巨大的负面影响；而缓和的减缓流行病传播策略如社交距离智能减慢流行病传播，无法有效控制流行病传播。基于此，本工作提出了一种动态调节抑制策略和减缓策略的干预机制来控制流行病传播，从而达到有效干预传播的目标。<br><img src="/images/paper2.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">3.<strong>B. Wang</strong><em>, M. Gou, Y.X. Han</em>. Impacts of information propagation on epidemic spread over different migration routes. Nonlinear Dynamics, 105(4), 3835-3847, 2021.<br><strong>中文摘要：</strong>由流行病驱动的个体间的信息传播会提高个体的风险意识，降低个体的感染可能性。基于此，本工作利用双层多种群网络模型，分析流行病与信息的共同传播。在已获得消息个体和未获得消息个体采取不同的迁移路径的假设条件下，探讨不同的迁移路径如何影响流行病传播。利用微马尔可夫方程，解析计算了该模型下的传播阈值。实验结果验证了理论的正确性。结果表明，信息传播对抑制流行病传播的作用极为有限。信息传播的作用需要综合考虑个体的迁移路径，尤其是有意识个体的迁移行为和迁移频率。此外，网络初始人口分布对传播行为产生影响。对于异质人口分布，个体的频繁移动会推迟流行病的传播。分析空间移动中个体间的信息交互及个体的移动行为影响对于设计有效的干预流行病策略具有重要的指导意义。<br><img src="/images/paper3.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">4.<strong>B. Wang</strong>, Z.Y. Xie, Y.X. Han*. Impacts of individual behavior changes on epidemic in time-varying networks. Phys. Rev. E，104，044307，2021.<br><strong>中文摘要：</strong>SARS、H1N1和COVID-19等流行病传播期间，非药物干预通常被采用去抑制它们的传播。非药物干预通常分为两种类型，分别是政府的干预和个体的行为变化。其中，个体行为的变化通常会影响个体之间的动态接触，这对于理解流行病的传播和控制带来了挑战。因此，本篇文章研究了流行病传播过程中三种典型的个体行为变化，即感染个体的自我隔离，易感个体的自我保护和他们之间的社交距离。通过带有吸引力的活跃度驱动时序网络模型，我们将这三种个体行为变化和个体的社会属性相关联，并通过均场理论推导出SIS模型的流行病爆发阈值。我们发现，这三种个体行为变化都可以推迟流行病的爆发时间，但是感染个体的自我隔离与社交距离可以有效地降低稳态时的感染人数。此外，三种个体行为变化的实施时间对于抑制流行病传播也起着重要的作用。<br><img src="/images/paper4.png"></font></p>
+<hr>
+<h3 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h3><p><font size="3" face="微软雅黑">1.<strong>B. Wang</strong>*, M. Gou, Y.K. Guo, G.H. Tanaka, Y.X. Han. Network structure-based interventions on spatial spread of epidemics in metapopulation networks, Phys. Rev. E，102，062306，2020.<br><strong>中文摘要</strong>：流行病传播的数学建模对于理解流行病传播机制和帮助政策制定者评估干预策略的有效性具有重要意义。统计分析发现，在新冠病毒疫情期间中国各个城市的感染率呈现异质性分布。导致这一现象的主要原因是由于各个城市实施了不同力度的干预策略。在分析各个城市的人口与城市交通网络中城市的属性之间的相关性基础上，我们提出了一类基于城市重要性的病毒传播干预策略，旨在理解干预措施与人口迁移率，人口分布与交通网络结构之间的关系。结果表明，干预网络中度较大的城市能够有效抑制流行病的传播。这一研究对于理解非均匀分布的干预政策的实施效率具有重要意义。<br><img src="/images/paper5.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">2.<strong>B.Wang</strong>, H.J. Zeng, and Y.X. Han*. Random walks in time-varying networks with memory. Phys. Rev. E, 102,062309, 2020.<br><strong>中文摘要</strong>：网络上的随机游走对于节点重要性识别具有重要意义并广泛应用于pagerank算法，社团结构检测等。由于现实中个体间的作用具有典型的时效性和记忆性，基于此，本工作提出考虑时序网络上个体的记忆对随机游走。解析计算随机游走过程的游走者分布和平均第一到达时间发现，与无记忆的个体间作用相比，记忆会降低收集游走者的能力，特别是对活跃度较大的节点，记忆会延迟第一到达时间。数值仿真和实证数据分析支持了理论结果。本研究成果对于网络中重要节点的识别具有重要意义。</font></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+       <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+       <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+         
+      </ul>
+      <!--noindex-->
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="王冰"
+      src="/images/bing.jpg">
+  <p class="site-author-name" itemprop="name">王冰</p>
+  <div class="site-description" itemprop="description">教授<br>博导/硕导</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:bingbignwang@shu.edu.cn" title="bingbignwang@shu.edu.cn → mailto:bingbignwang@shu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>bingbignwang@shu.edu.cn</a>
+      </span>
+  </div>
+
+
+
+      </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="far fa-laugh"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王冰</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
