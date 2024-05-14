@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/phd.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="20211.B. Wang, H.J. Zeng, and Y.X. Han. Dynamical immunization based on random-walk in time-varying networks. Chaos, Solitions &amp;Fractals，155，111755，2022.中文摘要：随机游走过程作为简单的扩散过程，能够识别网络中的重要节点，可以应用于免疫策略">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Complex Network">
+<meta property="og:url" content="http://example.com/2021/12/05/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/index.html">
+<meta property="og:site_name" content="Complex Network">
+<meta property="og:description" content="20211.B. Wang, H.J. Zeng, and Y.X. Han. Dynamical immunization based on random-walk in time-varying networks. Chaos, Solitions &amp;Fractals，155，111755，2022.中文摘要：随机游走过程作为简单的扩散过程，能够识别网络中的重要节点，可以应用于免疫策略">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/paper1.png">
+<meta property="og:image" content="http://example.com/images/paper2.png">
+<meta property="og:image" content="http://example.com/images/paper3.png">
+<meta property="og:image" content="http://example.com/images/paper4.png">
+<meta property="og:image" content="http://example.com/images/paper5.png">
+<meta property="article:published_time" content="2021-12-05T08:45:58.000Z">
+<meta property="article:modified_time" content="2022-01-01T13:06:59.000Z">
+<meta property="article:author" content="王冰">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/paper1.png">
+
+<link rel="canonical" href="http://example.com/2021/12/05/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Complex Network</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    
+      <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Complex Network</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-个人首页">
+
+    <a href="/%E4%B8%AA%E4%BA%BA%E9%A6%96%E9%A1%B5/" rel="section"><i class="fas fa-user fa-fw"></i>个人首页</a>
+
+  </li>
+        <li class="menu-item menu-item-团队近况">
+
+    <a href="/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/" rel="section"><i class="far fa-comments fa-fw"></i>团队近况</a>
+
+  </li>
+        <li class="menu-item menu-item-科研成果">
+
+    <a href="/%E7%A7%91%E7%A0%94%E6%88%90%E6%9E%9C/" rel="section"><i class="fas fa-flask fa-fw"></i>科研成果</a>
+
+  </li>
+        <li class="menu-item menu-item-联系方式">
+
+    <a href="/%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F/" rel="section"><i class="fas fa-map-marked fa-fw"></i>联系方式</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/05/%E5%9B%A2%E9%98%9F%E8%BF%91%E5%86%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/bing.jpg">
+      <meta itemprop="name" content="王冰">
+      <meta itemprop="description" content="教授<br>博导/硕导">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Complex Network">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-05 16:45:58" itemprop="dateCreated datePublished" datetime="2021-12-05T16:45:58+08:00">2021-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-01 21:06:59" itemprop="dateModified" datetime="2022-01-01T21:06:59+08:00">2022-01-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h3><p><font size="3" face="微软雅黑">1.<strong>B. Wang</strong><em>, H.J. Zeng, and Y.X. Han</em>. Dynamical immunization based on random-walk in time-varying networks. Chaos, Solitions &amp;Fractals，155，111755，2022.<br><strong>中文摘要：</strong>随机游走过程作为简单的扩散过程，能够识别网络中的重要节点，可以应用于免疫策略的制定等问题。考虑到节点间的动态交互行为，网络信息依赖于时间而十分有限，本工作提出一种在时序网络中基于随机游走的动态免疫策略。通过调整时间窗口的大小，节点信息不断累积。与传统的随机免疫相比，免疫效率大幅度提高，与熟识者免疫效果相当。<br><img src="/images/paper1.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">2.Y.X. Han, ZY. Xie, Y.K. Guo, <strong>B. Wang</strong>*. Modeling of suppression and mitigation interventions in the COVID-19 epidemics, BMC Public health，21，723，2021.<br><strong>中文摘要：</strong>非药物干预流行病传播是当前控制新冠疫情的主要有效手段。严格的抑制流行病传播策略如封城等能有效抑制流行病传播，但给正常的社会生活和经济行为带来巨大的负面影响；而缓和的减缓流行病传播策略如社交距离智能减慢流行病传播，无法有效控制流行病传播。基于此，本工作提出了一种动态调节抑制策略和减缓策略的干预机制来控制流行病传播，从而达到有效干预传播的目标。<br><img src="/images/paper2.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">3.<strong>B. Wang</strong><em>, M. Gou, Y.X. Han</em>. Impacts of information propagation on epidemic spread over different migration routes. Nonlinear Dynamics, 105(4), 3835-3847, 2021.<br><strong>中文摘要：</strong>由流行病驱动的个体间的信息传播会提高个体的风险意识，降低个体的感染可能性。基于此，本工作利用双层多种群网络模型，分析流行病与信息的共同传播。在已获得消息个体和未获得消息个体采取不同的迁移路径的假设条件下，探讨不同的迁移路径如何影响流行病传播。利用微马尔可夫方程，解析计算了该模型下的传播阈值。实验结果验证了理论的正确性。结果表明，信息传播对抑制流行病传播的作用极为有限。信息传播的作用需要综合考虑个体的迁移路径，尤其是有意识个体的迁移行为和迁移频率。此外，网络初始人口分布对传播行为产生影响。对于异质人口分布，个体的频繁移动会推迟流行病的传播。分析空间移动中个体间的信息交互及个体的移动行为影响对于设计有效的干预流行病策略具有重要的指导意义。<br><img src="/images/paper3.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">4.<strong>B. Wang</strong>, Z.Y. Xie, Y.X. Han*. Impacts of individual behavior changes on epidemic in time-varying networks. Phys. Rev. E，104，044307，2021.<br><strong>中文摘要：</strong>SARS、H1N1和COVID-19等流行病传播期间，非药物干预通常被采用去抑制它们的传播。非药物干预通常分为两种类型，分别是政府的干预和个体的行为变化。其中，个体行为的变化通常会影响个体之间的动态接触，这对于理解流行病的传播和控制带来了挑战。因此，本篇文章研究了流行病传播过程中三种典型的个体行为变化，即感染个体的自我隔离，易感个体的自我保护和他们之间的社交距离。通过带有吸引力的活跃度驱动时序网络模型，我们将这三种个体行为变化和个体的社会属性相关联，并通过均场理论推导出SIS模型的流行病爆发阈值。我们发现，这三种个体行为变化都可以推迟流行病的爆发时间，但是感染个体的自我隔离与社交距离可以有效地降低稳态时的感染人数。此外，三种个体行为变化的实施时间对于抑制流行病传播也起着重要的作用。<br><img src="/images/paper4.png"></font></p>
+<hr>
+<h3 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h3><p><font size="3" face="微软雅黑">1.<strong>B. Wang</strong>*, M. Gou, Y.K. Guo, G.H. Tanaka, Y.X. Han. Network structure-based interventions on spatial spread of epidemics in metapopulation networks, Phys. Rev. E，102，062306，2020.<br><strong>中文摘要</strong>：流行病传播的数学建模对于理解流行病传播机制和帮助政策制定者评估干预策略的有效性具有重要意义。统计分析发现，在新冠病毒疫情期间中国各个城市的感染率呈现异质性分布。导致这一现象的主要原因是由于各个城市实施了不同力度的干预策略。在分析各个城市的人口与城市交通网络中城市的属性之间的相关性基础上，我们提出了一类基于城市重要性的病毒传播干预策略，旨在理解干预措施与人口迁移率，人口分布与交通网络结构之间的关系。结果表明，干预网络中度较大的城市能够有效抑制流行病的传播。这一研究对于理解非均匀分布的干预政策的实施效率具有重要意义。<br><img src="/images/paper5.png"></font></p>
+<hr>
+<p><font size="3" face="微软雅黑">2.<strong>B.Wang</strong>, H.J. Zeng, and Y.X. Han*. Random walks in time-varying networks with memory. Phys. Rev. E, 102,062309, 2020.<br><strong>中文摘要</strong>：网络上的随机游走对于节点重要性识别具有重要意义并广泛应用于pagerank算法，社团结构检测等。由于现实中个体间的作用具有典型的时效性和记忆性，基于此，本工作提出考虑时序网络上个体的记忆对随机游走。解析计算随机游走过程的游走者分布和平均第一到达时间发现，与无记忆的个体间作用相比，记忆会降低收集游走者的能力，特别是对活跃度较大的节点，记忆会延迟第一到达时间。数值仿真和实证数据分析支持了理论结果。本研究成果对于网络中重要节点的识别具有重要意义。</font></p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/05/%E7%A7%91%E7%A0%94%E6%88%90%E6%9E%9C/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+       <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+       <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+         
+      </ul>
+      <!--noindex-->
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="王冰"
+      src="/images/bing.jpg">
+  <p class="site-author-name" itemprop="name">王冰</p>
+  <div class="site-description" itemprop="description">教授<br>博导/硕导</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:bingbignwang@shu.edu.cn" title="bingbignwang@shu.edu.cn → mailto:bingbignwang@shu.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>bingbignwang@shu.edu.cn</a>
+      </span>
+  </div>
+
+
+
+      </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2021"><span class="nav-text">2021</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2020"><span class="nav-text">2020</span></a></li></ol></div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="far fa-laugh"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王冰</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
